@@ -279,13 +279,13 @@ template<typename T>
 void hybrid_quick_sort(vector<T>& arr, int low, int high)
 {
   while (low < high) 
-    {
+    { SOGLIA=40;
 
     // If the size of the array is less 
     // than threshold apply insertion sort 
     // and stop recursion 
 
-    if (high-low + 1 < 10)
+    if (high-low + 1 < SOGLIA)
       {
         insertion_sort_hybryd(arr, low, high);
       break;
